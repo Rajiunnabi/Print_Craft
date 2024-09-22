@@ -8,7 +8,7 @@
 ### Step 1: Set Up XAMPP
 1. Open the XAMPP Control Panel (search for it in the Windows search bar).
 2. Start both **Apache** and **MySQL**.
-   - If they start successfully, green indicators will appear next to them.
+- If they start successfully, green indicators will appear next to them.
 ![WhatsApp Image 2024-09-22 at 13 42 17](https://github.com/user-attachments/assets/e4b8eae4-2d97-4514-b13c-1ae438b5cf08)
 
 
@@ -21,6 +21,7 @@
 ![WhatsApp Image 2024-09-22 at 13 42 18](https://github.com/user-attachments/assets/6ce83b9f-8ed3-4cac-83d3-f6d680c4b09e)  
 3. Copy the SQL code from [this link](https://codeshare.io/0b7gol).
 4. Paste it into the SQL bar and click **Go** to execute the query.
+![WhatsApp Image 2024-09-22 at 13 42 18 (1)](https://github.com/user-attachments/assets/8bf62124-e1db-4968-b789-d62d6c48be62)
 
 This will create the necessary database for the project.
 
