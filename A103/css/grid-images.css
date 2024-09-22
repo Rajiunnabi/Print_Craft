@@ -1,0 +1,97 @@
+
+#toggleButton{
+    border-radius:40px;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 25px #0ef;
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    cursor: pointer;
+    transform: scale(1.02); /* Scale up by 2% */
+    
+
+}
+
+#toggleButton:hover {
+    /* Hover styles */
+    background-color: burlywood;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.grid-container {
+    background-color: #081b29;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vh;
+    padding: 0.3vh;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 25px #0ef;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 38%;
+    width: 26.5%;
+    overflow-y: auto;
+    position: absolute;
+    transition: transform 0.3s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    border-radius: 40px;
+    margin-left: 11.5%;
+    margin-top: 1%;
+}
+
+.grid-container.hidden {
+    transform: scaleY(1);
+}
+
+.grid-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.grid-container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+@-moz-document url-prefix() {
+    .grid-container {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+}
+
+.grid-item {
+    background-color: #e0e0e0;
+    padding: 0.1vh;
+    border-radius: 0.8vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px; 
+    width: 100%;
+    margin: 2px;
+}
+
+.grid-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid-item img:hover {
+    filter: brightness(0.8); 
+}

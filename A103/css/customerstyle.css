@@ -1,0 +1,201 @@
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(-5deg); }
+    30% { transform: rotate(3deg); }
+    45% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background: #081b29;
+    display: flex;
+
+}
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+.logo {
+    width: 160px;
+    margin-bottom: 20px; /* Optional: Add space between logo and navbox */
+}
+
+.Login-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: rgb(2, 22, 75);
+    background-image: linear-gradient(45deg, rgb(54, 127, 196),rgb(91, 214, 194),rgb(230, 119, 112));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative; /* Ensure positioning context for pseudo-element */
+    z-index: 1; /* Ensure the button stays above other elements */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); /* Neon glow effect */
+}
+
+.Login-btn:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+}
+
+.Login-btn:hover {
+    animation: wobble 1s ease-in-out infinite;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8); /* Increase glow on hover */
+}
+
+.feature-link {
+    position: relative; /* Ensure positioning context */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+}
+
+.feature-link::before {
+    content: '';
+    position: absolute;
+    top: 2px; left: 0;
+    width: 100%; height: 90%;
+    background-color: rgba(255, 255, 255, 0.5); /* Glow color */
+    opacity: 0;
+    border-radius: 5px; /* Rounded corners */
+    z-index: -1; /* Behind the text */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+    animation: glow 2s infinite alternate; /* Glow animation */
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.feature-link:hover::before {
+    opacity: 1; /* Show glow on hover */
+}
+
+.feature-link:hover {
+    color: goldenrod; /* Change text color on hover */
+}
+
+.feature-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4; /* Adjust the opacity as needed */
+    z-index: 0; /* Ensure the image stays behind other elements */
+}
+
+.profile_div{
+    height: 100vh;
+    width: 20%;
+    position: relative;
+    /* background-color: #0ef; */
+}
+
+.hidden {
+    display: none; /* Hide the checkbox */
+}
+
+.button {
+    display: flex;
+    margin: auto;
+    margin-top: 20%;
+    width: 40px;
+    height: 40px;
+    background-color: #0ef;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.button i {
+    font-size: 40px; /* Adjust icon size as needed */
+    margin: auto;
+}
+
+.button:hover {
+    background-color: red;
+}
+
+.transparent-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    background-color: transparent;
+    border: 2px solid transparent; /* Initially transparent border */
+    margin-top: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 25px;
+    text-align: center;
+    overflow: hidden; /* Hide overflowing content */
+    content-visibility: hidden;
+}
+
+
+.transparent-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transparent-box li {
+    margin-bottom: 10px;
+}
+
+.transparent-box a {
+    display: block;
+    padding: 10px 20px;
+    color: #0ef;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-box a:hover {
+    background-color: rgba(0, 255, 76, 0.1); /* Lighten background on hover */
+    color: blanchedalmond;
+}
+
+
+/* Styles for when the button is "clicked" */
+.hidden:checked ~ .transparent-box {
+    background-color: #081b29;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 25px #0ef;
+    content-visibility: visible;
+}

@@ -1,0 +1,194 @@
+button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#toggleButton{
+    z-index: 10;
+    border-radius: 2em;
+    
+}
+
+#toggleButton:hover{
+    background-color: #ccc;
+}
+#toggleButton:active {
+    transform: scale(0.98);
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5vh;
+    padding: 0.5vh;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 38%;
+    width: 26.5%;
+    overflow-y: auto;
+    position: absolute;
+    left: 3.5vw;
+    top:74vh;
+    transition: transform 0.3s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index:10;
+}
+
+
+
+.grid-container.hidden {
+    transform: scaleY(1);
+}
+
+.grid-container::-webkit-scrollbar {
+    width: 12px;
+    display:none;
+}
+
+.grid-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+    display:none;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+@-moz-document url-prefix() {
+    .grid-container {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f0f0f0;
+    }
+}
+
+.grid-item {
+    background-color: #e0e0e0;
+    padding: 0.1vh;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 100%;
+}
+
+.grid-item img {
+    width: 100px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background-color 0.2s ease;
+}
+
+.grid-item img:hover {
+    filter: brightness(0.8); /* Darken the image slightly on hover */
+    background-color: rgb(207, 206, 206);
+}
+
+
+
+
+
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5vh;
+    padding: 0.5vh;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 38%;
+    width: 26.5%;
+    overflow-y: auto;
+    position: absolute;
+    left: 4vw;
+    top:83.5vh;
+    transition: transform 0.3s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index:5;
+}
+
+
+.grid-container2.hidden {
+    transform: scaleY(1);
+}
+
+.grid-container2::-webkit-scrollbar {
+    width: 12px;
+    display:none;
+}
+
+.grid-container2::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+    display:none;
+}
+
+.grid-container2::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.grid-container2::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+#toggleButton2{
+    z-index: 9;
+    border-radius: 2em;
+    
+}
+
+#toggleButton2:hover{
+    background-color: #ccc;
+}
+#toggleButton2:active {
+    transform: scale(0.98);
+}
+
+
+.grid-item2 {
+    background-color: #e0e0e0;
+    padding: 0.1vh;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 100%;
+}
+
+.grid-item2 img {
+    width: 100px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background-color 0.2s ease;
+}
+
+.grid-item2 img:hover {
+    filter: brightness(0.8); /* Darken the image slightly on hover */
+    background-color: rgb(207, 206, 206);
+}

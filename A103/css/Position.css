@@ -1,0 +1,126 @@
+body{
+    background-color: black;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+}
+
+.one{
+    height:50vh;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    background-color:rgb(255, 166, 0);  
+    align-items: center;
+}
+
+.first{
+    position:relative;
+    height:95%;
+    width:25vw;
+    border-radius: 2em;
+    background-color: rgb(0, 140, 255);
+    margin-left:2.5vw;
+    margin-right:2.5vw;
+    /*visibility: hidden;*/
+    left:5vw;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    background-color: white;
+}
+
+.btn{
+    position:relative;
+    width:20vw;
+    height:95%;
+    background-color: aqua;
+    
+    
+    /*left:25%;
+    top:25%;*/  /*manually setting the positin of btn class*/
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    left:10vw;   
+}
+
+.second{
+    position: relative;
+    height:95%;
+    width:25vw;
+    border-radius: 2em;
+    background-color: rgb(0, 140, 255);
+    margin-left:2.5vw;
+    margin-right:2.5vw;
+    margin-top:10px;
+    margin-bottom:10px;
+    /*visibility: hidden;*/
+    left:15vw;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    background-color: white;
+}
+
+
+.imp{
+    position:relative;
+    margin:auto;
+    background-color: gainsboro;
+    border-color: blue;
+    border-radius: 2em;
+    border-width: 0.5em;
+    cursor: pointer;
+}
+
+.imp:hover{
+    background-color: rgb(180, 174, 174);
+}
+
+.two{
+    background-color: rgb(150, 145, 145);
+    width:100vw;
+    height:50vh;
+    display:flex;
+    flex-direction: row;
+}
+
+.three{
+    background-color: blue;
+    width:50vw;
+    height:50vh;
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+.four{
+    background-color: green;
+    width:50vw;
+    height:50vh;
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+.five{
+    background-color: rgb(116, 59, 133);
+    width:50vw;
+    height:50vh;
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+.img1{
+    margin:0;
+    width:100%;
+    height: 100%; /*percentage accoridng to the parent size*/
+}

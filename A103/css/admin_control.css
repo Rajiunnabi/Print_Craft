@@ -1,0 +1,53 @@
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(-5deg); }
+    30% { transform: rotate(3deg); }
+    45% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.Login-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: rgb(2, 22, 75);
+    background-image: linear-gradient(45deg, rgb(54, 127, 196),rgb(91, 214, 194),rgb(230, 119, 112));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative; /* Ensure positioning context for pseudo-element */
+    z-index: 1; /* Ensure the button stays above other elements */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); /* Neon glow effect */
+}
+
+.Login-btn:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+}
+
+.Login-btn:hover {
+    animation: wobble 1s ease-in-out infinite;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8); /* Increase glow on hover */
+}
+
+
+.feature-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4; /* Adjust the opacity as needed */
+    z-index: 0; /* Ensure the image stays behind other elements */
+}
+
+
+

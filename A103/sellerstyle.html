@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Shop</title>
+
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sellerstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+<img src="image/bg.png" class="feature-img">
+   <div class="hero">
+        <nav>
+            <img src="image/bg2.png" class="logo">
+            <div class="navbox">
+                <ul>
+                    <li><a href="Seller-home.php" target="_parent">Home</a></li>
+                    <li><a href="sellershop.php" target="_parent" class="feature-link" style="color: gold;">Manage Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="Seller-home.php" target="_parent" class="Login-btn"><i class='bx bxs-home' style="font-size: 30px; margin-top: -10px;"></i></a>
+            </div>
+        </nav>
+         
+        
+        <div class="product-details">
+            <label for="productName" style="color: burlywood;">Product Name</label>
+            <input type="text" id="productName" placeholder="Enter product name" title="Product Name">
+            
+            <label for="productPrice" style="color: burlywood;">Price</label>
+            <input type="number" id="productPrice" placeholder="Enter product price" title="Product Price">
+    
+            <label for="productColors" style="color: burlywood;">Available Colors</label>
+            <input type="text" id="productColors" placeholder="Enter colors (comma-separated)" title="Available Colors">
+    
+            <label for="productSizes" style="color: burlywood;" >Available Sizes</label>
+            <select id="productSizes" title="Available Sizes">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+            
+            <label for="imageLoader" style="color: burlywood; cursor: pointer;" >Upload Image</label>
+            <input type="file" id="imageLoader" accept="image/*" title="Upload Image">
+            
+            <button id="addToShopButton" title="Add to Shop">Add to Shop</button>
+        </div>
+    
+        <div class="pro">
+            <div class="product" id="uploadedImageContainer" title="Uploaded Image Container"></div>
+        </div>
+       
+
+    </div>
+
+
+    <div class="profile_div">
+        <input type="checkbox" id="myButton" class="hidden">
+        <label for="myButton" class="button">
+            <i class='bx bxs-user-circle'></i>
+        </label>
+        <div class="transparent-box">
+            <ul>
+            <li><a href="seller_profile.php" target="_parent">Profile</a></li>
+            <li><a href="pending_order.php" target="_parent">Pending Orders</a></li>
+            <li><a href="seller_report.php" target="_parent">Report a Bug</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const imageLoader = document.getElementById("imageLoader");
+            const uploadedImageContainer = document.getElementById("uploadedImageContainer");
+            const addToShopButton = document.getElementById("addToShopButton");
+            const productName = document.getElementById("productName");
+            const productPrice = document.getElementById("productPrice");
+            const productColors = document.getElementById("productColors");
+            const productSizes = document.getElementById("productSizes");
+
+            imageLoader.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    const imageUrl = event.target.result;
+                    uploadedImageContainer.style.backgroundImage = `url(${imageUrl})`;
+                };
+
+                if (file) {
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            addToShopButton.addEventListener("click", function() {
+                if (productName.value && productPrice.value && productColors.value && productSizes.value) {
+                    // Prepare form data
+                    const formData = new FormData();
+                    formData.append('productName', productName.value);
+                    formData.append('productPrice', productPrice.value);
+                    formData.append('productColors', productColors.value);
+                    formData.append('productSizes', productSizes.value);
+                    formData.append('imageLoader', imageLoader.files[0]);
+
+                    // Send data to PHP script using fetch API
+                    fetch('sellerstyle.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message);
+                            // Optionally, reset form fields or take other actions upon success
+                        } else {
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

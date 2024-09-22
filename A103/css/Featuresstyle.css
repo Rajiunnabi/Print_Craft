@@ -1,0 +1,177 @@
+/* Existing styles for .Login-btn and .feature-link */
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(-5deg); }
+    30% { transform: rotate(3deg); }
+    45% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.Login-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: rgb(2, 22, 75);
+    background-image: linear-gradient(45deg, rgb(54, 127, 196), rgb(91, 214, 194), rgb(230, 119, 112));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative; /* Ensure positioning context for pseudo-element */
+    z-index: 1; /* Ensure the button stays above other elements */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); /* Neon glow effect */
+}
+
+.Login-btn:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+}
+
+.Login-btn:hover {
+    animation: wobble 1s ease-in-out infinite;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8); /* Increase glow on hover */
+}
+
+.feature-link {
+    position: relative; /* Ensure positioning context */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+}
+
+.feature-link::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.5); /* Glow color */
+    opacity: 0;
+    border-radius: 5px; /* Rounded corners */
+    z-index: -1; /* Behind the text */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+    animation: glow 2s infinite alternate; /* Glow animation */
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.feature-link:hover::before {
+    opacity: 1; /* Show glow on hover */
+}
+
+.feature-link:hover {
+    color: goldenrod; /* Change text color on hover */
+}
+
+/* Styling for red circle button */
+
+.feature-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4; /* Adjust the opacity as needed */
+    z-index: 0; /* Ensure the image stays behind other elements */
+}
+
+/* New styles for feature items */
+
+
+/* Existing styles (unchanged) */
+
+.features-container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5vh;
+    overflow-y: auto; /* Add scrollbar for vertical overflow */
+    max-height: 63vh; /* Set max height to enable scrolling */
+}
+
+/* Styling for WebKit/Blink browsers (Chrome, Safari, Edge) */
+.features-container::-webkit-scrollbar {
+    width: 1.5vw; /* Width of the scrollbar */
+    
+}
+
+.features-container::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+}
+
+.features-container::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Transparent thumb */
+    border: 2px solid blanchedalmond;
+    border-radius: 20px; /* Rounded corners */
+}
+
+.features-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Darker color on hover */
+}
+
+
+
+.feature-item {
+    margin-right: 50%;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    margin-top: 2%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid blanchedalmond;
+    box-shadow: 0 0 25px #0ef;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: rgba(190, 7, 7, 0.2);
+    transform: translateY(-5px);
+}
+
+.feature-item2 {
+    margin-left: 50%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid blanchedalmond;
+    box-shadow: 0 0 25px #0ef;
+    border-radius: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item2:hover {
+    background-color: rgba(190, 7, 7, 0.2);
+    transform: translateY(-5px);
+}
+
+.feature-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+}

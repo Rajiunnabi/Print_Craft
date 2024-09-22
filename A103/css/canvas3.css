@@ -1,0 +1,429 @@
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(-5deg); }
+    30% { transform: rotate(3deg); }
+    45% { transform: rotate(-3deg); }
+    60% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    /*overflow-x: hidden;*/
+}
+
+.head{
+    width:100%;
+    height:30vh;
+    margin-bottom: 0px;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; 
+    background-color: #081b29;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.work{
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+}
+.zero{
+    min-height:100vh;
+    width:25vw;
+    background-color: #113a57;
+    border-radius: 1em;
+    margin:10px 5px 10px 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0px rgb(0, 0, 0);
+}
+
+.img1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*border:dashed 1px;*/
+    cursor: pointer;
+    height:13vh;
+    background-color: #e0dfdf;
+    border-radius: 1em;
+}
+
+
+#upload-icon{
+    width:50%;
+    height:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    width:6.5vw;
+    height:8vh;
+}
+
+.icon:active{
+    transform: scale(0.95);
+}
+
+input[type="file"] {
+    /*display: none;  Hide the file input */
+    position: absolute;
+    left: 33vh;
+    z-index: -2;
+}
+
+
+.one{
+    display:flex;
+    flex-direction: row;
+    min-height:100vh;
+    width:100vw;
+    background-color: rgb(107, 170, 253);
+    border-radius: 1em;
+    margin:10px 5px 10px 5px;
+    background-color: rgb(255, 255, 255);
+    /*background-image: linear-gradient(45deg,#000000,#030830,#000000);*/
+}
+
+.product { 
+    box-shadow: 0 0 2em rgba(0,0,0,0.2); 
+    border-radius: 1em; 
+    width: 100%; 
+    border: 0px solid rgb(0, 0, 0);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    justify-content: center;
+    align-content: center;
+    display: flex;
+
+}
+
+canvas {    
+    background: transparent;
+    width: 17vw; /* Adjusted canvas width */
+    height: 52vh; /* Adjusted canvas height */
+    z-index: 4;
+    position: absolute;
+    top: 59vh;
+    border: 0.1em dashed #000;
+    mix-blend-mode: multiply;
+    cursor:move;
+}
+
+.img2{
+    z-index:0; 
+    width:48vw;
+    height:100vh;
+    position: absolute;
+}
+
+.img3{
+    position: absolute;
+    /*left:22.6vw;*/
+    left:22.4vw;
+    border-radius:1em;  
+    z-index: 2; 
+    width: 48vw; 
+    height:100%;
+    /*top:31.7%;*/
+    top:31.5vh;
+}
+.color {
+    background: white; 
+    top: 31.5%; 
+    left: 22.87%; 
+    position: absolute;
+    width: 48%; 
+    height: 100%; 
+    z-index: 1; 
+    mix-blend-mode: multiply;
+    border-radius: 40px;
+}
+
+.color-input {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    background: #fff; 
+    border: 1px #ccc solid; 
+    height: 30px;
+    width: 30px;
+    border-radius: 10px; 
+    padding: 0.3em;
+    visibility: hidden;
+}
+
+
+.two{
+    position: relative;
+    margin:10px 10px 10px 5px;
+    display:flex;
+    flex-direction: row;
+    min-height:100vh;
+    width:35%;
+    background-color: transparent;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(0, 183, 255);
+}
+
+
+.btn{
+    margin:10px;
+}
+
+.logo {
+    width: 160px;
+    margin-right:10vw;
+    margin-left:25px;
+}
+
+.Login-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: rgb(2, 22, 75);
+    background-image: linear-gradient(45deg, rgb(54, 127, 196),rgb(91, 214, 194),rgb(230, 119, 112));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 1; /* Ensure the button stays above other elements */
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5); /* Neon glow effect */
+    width:auto;
+}
+
+.Login-btn:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+}
+
+.Login-btn:hover {
+    animation: wobble 1s ease-in-out infinite;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8); /* Increase glow on hover */
+}
+
+.profile_div{
+    height: 100vh;
+    width: 20%;
+    /* background-color: #0ef; */
+    position: relative;
+    margin-top:-30px;
+    right:1vh;
+}
+
+.hidden {
+    display: none; /* Hide the checkbox */
+}
+
+
+
+.button {
+    display: flex;
+    margin: auto;
+    margin-top: 20%;
+    width: 40px;
+    height: 40px;
+    background-color: #0ef;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.button i {
+    font-size: 40px; /* Adjust icon size as needed */
+    margin: auto;
+}
+
+.button:hover {
+    background-color: red;
+}
+
+.transparent-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    height: 13vh;
+    background-color: transparent;
+    border: 2px solid transparent; /* Initially transparent border */
+    margin-top: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 25px;
+    text-align: center;
+    overflow: hidden; /* Hide overflowing content */
+    content-visibility: hidden;
+    z-index: 5;
+    /*overflow-y: auto;*/
+    padding:6.5vh 0 6.5vh 0;
+    position: relative;
+    top:-2vh;
+}
+
+
+.transparent-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transparent-box li {
+    margin: 20px;
+}
+
+.transparent-box a {
+    display: block;
+    /*padding: 10px 20px;*/
+    column-gap: 10px;
+    color: #0ef;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-box a:hover {
+    background-color: rgba(0, 255, 76, 0.1); /* Lighten background on hover */
+    color: blanchedalmond;
+}
+
+
+/* Styles for when the button is "clicked" */
+.hidden:checked ~ .transparent-box {
+    background-color: #081b29;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 25px #0ef;
+    content-visibility: visible;
+}
+
+
+.COLORS{
+    width:80%;
+    height:26%;
+    background-color: white;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:0.5vh;
+    padding:1vh;
+    box-shadow: 0 0 25px rgb(0, 0, 0);
+    transition: transform 0.4s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    
+}
+
+.COLORS.hidden {
+    transform: scaleY(1);
+}
+
+.clr{
+    background-color: #e0e0e0;
+    padding: 0.1vh;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 70%;
+    cursor: pointer;
+    margin:1vh;
+    opacity:0.8;
+    border-color:transparent ;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+.clr:hover{
+    opacity: 0.6;
+}
+
+.clr:active{
+    transform: scale(0.95);
+}
+
+
+.COLORS.hidden {
+    transform: scaleY(1);
+}
+
+#clr-btn{
+    z-index: 10;
+    border-radius: 2em;
+    background-image: linear-gradient(45deg, rgb(251, 255, 0),rgb(255, 0, 0),rgb(25, 0, 255));
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#clr-btn:hover{
+    opacity: 0.9;
+}
+
+#clr-btn:active {
+    transform: scale(0.98);
+}
+
+.feature-link {
+    position: relative; /* Ensure positioning context */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+}
+
+.feature-link::before {
+    content: '';
+    position: absolute;
+    top: 2px; left: 0;
+    width: 100%; height: 90%;
+    background-color: rgba(255, 255, 255, 0.5); /* Glow color */
+    opacity: 0;
+    border-radius: 5px; /* Rounded corners */
+    z-index: -1; /* Behind the text */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+    animation: glow 2s infinite alternate; /* Glow animation */
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.feature-link:hover::before {
+    opacity: 1; /* Show glow on hover */
+}
+
+.feature-link:hover {
+    color: goldenrod; /* Change text color on hover */
+}
+
+
+
