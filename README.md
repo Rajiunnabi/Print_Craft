@@ -26,7 +26,7 @@
 This will create the necessary database for the project.
 
 ### Step 3: Add Project Files
-1. Navigate to the XAMPP installation folder
+1. Navigate to the XAMPP installation folder.
 ![Screenshot 2024-09-22 141710](https://github.com/user-attachments/assets/60fc6156-b474-42cf-aa0c-b542dc5efaf6)
 2. Open the **htdocs** folder.
 ![WhatsApp Image 2024-09-22 at 13 42 18 (3)](https://github.com/user-attachments/assets/870a5b12-225d-4516-80fa-d431e0d1af25)
