@@ -16,6 +16,7 @@
 
 ### Step 2: Configure MySQL
 1. In the XAMPP Control Panel, click on **Admin** next to MySQL.
+![WhatsApp Image 2024-09-22 at 13 42 17 (1)](https://github.com/user-attachments/assets/930cb05c-dbfa-4ab0-bf99-0513774eb863)
 2. Go to the **SQL** section.
 3. Copy the SQL code from [this link](https://codeshare.io/0b7gol).
 4. Paste it into the SQL bar and click **Go** to execute the query.
