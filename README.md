@@ -31,13 +31,15 @@ This will create the necessary database for the project.
 2. Open the **htdocs** folder.
 ![WhatsApp Image 2024-09-22 at 13 42 18 (3)](https://github.com/user-attachments/assets/870a5b12-225d-4516-80fa-d431e0d1af25)
 3. Download the project files from the repository.
-
 4. Extract the downloaded ZIP file and place it in the **htdocs** folder.
+![WhatsApp Image 2024-09-22 at 13 42 19](https://github.com/user-attachments/assets/7be522c8-4864-4200-a476-29cdcd53fbbc)
 
 
 ### Step 4: Launch the Project
-1. Open your browser and go to `localhost/Print_Craft-main`.
-2. Navigate through the files: open **A103**, then select **webfront.php**.
+1. Open your browser and go to `localhost/your_file_name`.
+2. Navigate through the files: then select **webfront.php**.
+![WhatsApp Image 2024-09-22 at 13 42 19 (2)](https://github.com/user-attachments/assets/3aaa4311-faa8-4aa9-afab-fbb78b20d21e)
+
 
 You should now see the web application running successfully.
 
