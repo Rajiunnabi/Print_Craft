@@ -10,6 +10,7 @@
 2. Start both **Apache** and **MySQL**.
    - If they start successfully, green indicators will appear next to them.
 ![WhatsApp Image 2024-09-22 at 13 42 17](https://github.com/user-attachments/assets/e4b8eae4-2d97-4514-b13c-1ae438b5cf08)
+![WhatsApp Image 2024-09-22 at 13 42 17 (1)](https://github.com/user-attachments/assets/5b00899a-537e-4426-8362-a59c9182f123)
 
 
 > **Troubleshooting:** If you encounter any issues during this step, refer to [this video tutorial](https://www.youtube.com/watch?v=ipMedkjMupw).
