@@ -37,6 +37,7 @@ This will create the necessary database for the project.
 
 ### Step 4: Launch the Project
 1. Open your browser and go to `localhost/your_file_name`.
+![WhatsApp Image 2024-09-22 at 13 42 19 (1)](https://github.com/user-attachments/assets/ec408d9c-b088-4bae-9bea-f28abfc1bb71)
 2. Navigate through the files: then select **webfront.php**.
 ![WhatsApp Image 2024-09-22 at 13 42 19 (2)](https://github.com/user-attachments/assets/3aaa4311-faa8-4aa9-afab-fbb78b20d21e)
 
