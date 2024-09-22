@@ -48,7 +48,7 @@ You should now see the web application running successfully.
 
 ## Demo
 
-Check out [this demo video](https://www.youtube.com/watch?v=PtFKXTLKkgI&themeRefresh=1) to learn how to use the app.
+Check out [this demo video](https://www.youtube.com/watch?v=PtFKXTLKkgI&themeRefresh=1) to learn how to use the webpage.
 
 ## Project Report
 
