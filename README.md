@@ -9,6 +9,8 @@
 1. Open the XAMPP Control Panel (search for it in the Windows search bar).
 2. Start both **Apache** and **MySQL**.
    - If they start successfully, green indicators will appear next to them.
+![WhatsApp Image 2024-09-22 at 13 42 17](https://github.com/user-attachments/assets/e4b8eae4-2d97-4514-b13c-1ae438b5cf08)
+
 
 > **Troubleshooting:** If you encounter any issues during this step, refer to [this video tutorial](https://www.youtube.com/watch?v=ipMedkjMupw).
 
